@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 
 
 class Meal extends Component {
@@ -38,7 +38,9 @@ class Meal extends Component {
                     <div className="button-container" >
                         <div className="field">
                             <p className="control">
-                                <button className="button is-warning is-rounded">Edit Entrée</button>
+                                <Link to={`/edit/${element.id}`}>
+                                    <button className="button is-warning is-rounded">Edit Entrée</button>
+                                </Link>
                             </p>
                         </div>
                         <p></p>

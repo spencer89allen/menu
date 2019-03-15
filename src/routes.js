@@ -8,6 +8,7 @@ export default (
     <Switch>
         <Route component={ Menu } exact path='/' />
         <Route component={ Kitchen } path='/kitchen' />
+        <Route component={ Kitchen } path='/edit/:id' />
         {/* <Route component={ Kitchen } path='/edit:id' /> */}
     </Switch>
 )

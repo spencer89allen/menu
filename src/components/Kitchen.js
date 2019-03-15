@@ -10,7 +10,7 @@ class Kitchen extends Component {
         imageInput: '',
         priceInput: '',
         newEntree: [],
-        
+        isEdit: false,
     }
 
     handleInput = (name, value) => {
@@ -51,7 +51,16 @@ class Kitchen extends Component {
         return (
             <div className='container'>
                 <br />
-                <h1>Kitchen</h1>
+                <div className="hero-body">
+                    <div className="container has-text-centered">
+                    <h1 className="title">
+                        Kitchen
+                    </h1>
+                    <h2 className="subtitle">
+                        wash your hands first!
+                    </h2>
+                    </div>
+                </div>
                 <div className="field is-horizontal">
                     <div className="field-label is-normal">
                         <label className="label">New Entrée</label>

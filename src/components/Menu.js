@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import Meal from './Meal';
-import Axios from 'axios'
 
 class Menu extends Component {
 
@@ -16,7 +15,6 @@ class Menu extends Component {
 
     getMenu = () => {
         axios.get('/api/getMeals').then((res) => {
-            console.log(res.data)
             this.setState({
                 menu: res.data
             })
@@ -25,7 +23,7 @@ class Menu extends Component {
     }
 
     handleDelete = (id) => {
-        Axios.delete(`/api/delete${id}`).then((response) => {
+        axios.delete(`/api/delete/${id}`).then((response) => {
             this.setState({
                 menu: response.data
             })
@@ -36,8 +34,22 @@ class Menu extends Component {
     render () {
         return (
             <div className='container'>
-                <h1>Menu</h1>
-                <Meal meal={this.state.menu} delete={this.handleDelete}/>
+
+                <div className="hero-body">
+                    <div className="container has-text-centered">
+                    <h1 className="title">
+                        Menu
+                    </h1>
+                    <h2 className="subtitle">
+                        Subtitle
+                    </h2>
+                    </div>
+                </div>
+
+                {/* <h1>Menu</h1> */}
+                <Meal   meal={this.state.menu} 
+                        delete={this.handleDelete}
+                    />
             </div>
         )
     }

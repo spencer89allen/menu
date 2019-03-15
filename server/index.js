@@ -10,7 +10,8 @@ app.use(bodyParser.json());
 //Endpoints
 app.post('/api/meal', ctrl.newMeal)
 app.get('/api/getMeals', ctrl.getMeal)
-app.delete('/api/delete:id', ctrl.deleteMeal)
+app.delete('/api/delete/:id', ctrl.deleteMeal)
+// app.put('/api/edit/:id', ctrl.editMeal)
 
 var Port = 4545;
 
